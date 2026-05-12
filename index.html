@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Catalyst — Join the waitlist · The women-first AI in life sciences & healthcare podcast</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/logo.png" />
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+<meta name="theme-color" content="#0B1F3D" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --navy:#0B1F3D;
+  --navy-2:#06152C;
+  --navy-3:#020A1C;
+  --azure:#2A7DE1;
+  --azure-bright:#1E88FF;
+  --green:#7CE83A;
+  --silver:#D7DBE0;
+  --silver-2:#E8EBEF;
+  --offwhite:#F8F9FA;
+  --ink:#0B1F3D;
+  --ink-soft:#3A4A66;
+  --rule:rgba(11,31,61,.12);
+  --rule-dark:rgba(255,255,255,.10);
+  --container:1280px;
+  --gutter:48px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--offwhite);color:var(--ink);font-family:"Inter",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--azure)}
+.eyebrow.on-dark{color:var(--green)}
+.rule{height:1px;background:var(--rule);width:100%}
+
+/* ----- Nav ----- */
+.nav{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;border-bottom:1px solid var(--rule-dark)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:84px}
+.nav-brand{display:flex;align-items:center;gap:14px;font-family:"Archivo",sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em}
+.nav-brand img{height:44px;width:44px;border-radius:8px}
+.nav-brand .wordmark{display:flex;flex-direction:column;line-height:1}
+.nav-brand .wordmark .top{font-size:16px}
+.nav-brand .wordmark .bot{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.3em;font-weight:500;color:var(--silver);margin-top:4px}
+.nav-links{display:flex;gap:36px;align-items:center;font-size:15px;font-weight:500}
+.nav-links a{color:#E8EBEF;opacity:.85;transition:opacity .2s}
+.nav-links a:hover{opacity:1;color:var(--green)}
+.nav-cta{display:inline-flex;align-items:center;gap:10px;background:var(--green);color:var(--navy);padding:12px 22px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.02em;transition:transform .2s}
+.nav-cta:hover{transform:translateY(-1px)}
+.nav-cta svg{width:14px;height:14px}
+
+/* ----- Hero ----- */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden;padding:120px 0 140px}
+.hero::after{content:"";position:absolute;inset:auto -10% -20% auto;width:760px;height:760px;background:
+  radial-gradient(circle at 30% 30%, rgba(42,125,225,.35), transparent 60%);
+  filter:blur(20px);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:80px;align-items:center;position:relative;z-index:2}
+.hero h1{font-family:"Archivo",sans-serif;font-weight:900;font-size:clamp(72px,9.5vw,156px);line-height:.88;letter-spacing:-.03em;margin-top:28px}
+.hero h1 .ai{position:relative;color:var(--green);font-style:italic;display:inline-block;transform:translateY(-.05em) rotate(-6deg);font-family:"Archivo",sans-serif;font-weight:800;font-size:.55em;margin-right:.06em}
+.hero h1 .catalyst{display:block;color:var(--azure-bright)}
+.hero-sub{margin-top:36px;font-size:22px;line-height:1.45;max-width:620px;color:#D7DBE0;font-weight:400}
+.hero-sub b{color:#fff;font-weight:600}
+
+.listen-row{margin-top:48px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.listen-label{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--silver);margin-right:8px}
+.listen-pill{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:1px solid rgba(255,255,255,.18);border-radius:999px;font-size:14px;font-weight:600;color:#fff;background:rgba(255,255,255,.03);transition:all .2s}
+.listen-pill:hover{border-color:var(--green);color:var(--green);background:rgba(124,232,58,.06)}
+.listen-pill svg{width:14px;height:14px}
+
+.hero-meta{margin-top:48px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;color:var(--silver)}
+.hero-waitlist{margin-top:44px;display:flex;flex-wrap:wrap;gap:10px;max-width:580px;position:relative}
+.hero-waitlist input{flex:1;min-width:240px;padding:20px 26px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);color:#fff;font-family:"Inter",sans-serif;font-size:16px;outline:none;transition:border-color .2s,background .2s}
+.hero-waitlist input:focus{border-color:var(--green);background:rgba(124,232,58,.04)}
+.hero-waitlist input::placeholder{color:rgba(255,255,255,.45)}
+.hero-waitlist button{display:inline-flex;align-items:center;gap:10px;padding:20px 28px;border-radius:999px;border:none;background:var(--green);color:var(--navy);font-family:"Inter",sans-serif;font-weight:700;font-size:15px;cursor:pointer;transition:transform .2s}
+.hero-waitlist button svg{width:14px;height:14px}
+.hero-waitlist button:hover{transform:translateY(-1px)}
+.hero-waitlist.ok input{opacity:.5}
+.hero-waitlist.ok button{background:#fff}
+.hw-status{flex-basis:100%;margin-top:8px;font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--green);min-height:1em}
+.hero-meta .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(124,232,58,.18)}
+.hero-meta .meta-item{font-size:13px;font-family:"JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
+
+.hero-art{position:relative;justify-self:end;width:100%;max-width:460px;aspect-ratio:1/1}
+.hero-art img{width:100%;height:100%;border-radius:32px;box-shadow:0 40px 80px -20px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.04)}
+.hero-art .badge{position:absolute;left:-32px;bottom:36px;background:var(--green);color:var(--navy);padding:16px 22px;border-radius:14px;font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 20px 40px -10px rgba(0,0,0,.4)}
+.hero-art .ep-badge{position:absolute;right:-24px;top:-20px;background:#fff;color:var(--navy);padding:18px 22px;border-radius:14px;display:flex;align-items:baseline;gap:10px;box-shadow:0 20px 40px -10px rgba(0,0,0,.4)}
+.hero-art .ep-badge .n{font-family:"Archivo",sans-serif;font-weight:900;font-size:34px;line-height:1;color:var(--azure)}
+.hero-art .ep-badge .l{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+
+/* ----- Marquee strip ----- */
+.strip{background:var(--green);color:var(--navy);overflow:hidden;border-top:1px solid rgba(0,0,0,.05);border-bottom:1px solid rgba(0,0,0,.05)}
+.strip-track{display:flex;gap:48px;padding:22px 0;font-family:"Archivo",sans-serif;font-weight:800;font-size:22px;letter-spacing:-.01em;white-space:nowrap;animation:scroll 38s linear infinite}
+.strip-track span{display:inline-flex;align-items:center;gap:36px}
+.strip-track svg{width:18px;height:18px;flex-shrink:0;opacity:.7}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ----- Sections ----- */
+.section{padding:140px 0;position:relative}
+.section.dark{background:var(--navy);color:#fff}
+.section.deep{background:var(--navy-2);color:#fff}
+.section-head{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:end;margin-bottom:80px}
+.section-head h2{font-family:"Archivo",sans-serif;font-weight:800;font-size:clamp(48px,5.6vw,84px);line-height:.95;letter-spacing:-.025em}
+.section-head .lede{font-size:21px;line-height:1.5;color:var(--ink-soft);max-width:640px}
+.section.dark .section-head .lede{color:var(--silver)}
+
+/* WHY grid */
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.why-cell{background:var(--offwhite);padding:56px 48px;display:flex;flex-direction:column;gap:20px;min-height:300px}
+.why-num{font-family:"JetBrains Mono",monospace;font-size:13px;letter-spacing:.18em;color:var(--azure);font-weight:600}
+.why-cell h3{font-family:"Archivo",sans-serif;font-weight:700;font-size:28px;line-height:1.15;letter-spacing:-.01em}
+.why-cell p{font-size:17px;line-height:1.55;color:var(--ink-soft);margin-top:auto}
+
+/* NUMBERS */
+.numbers-intro{max-width:880px;font-family:"Archivo",sans-serif;font-weight:600;font-size:36px;line-height:1.25;letter-spacing:-.015em;margin-bottom:96px}
+.numbers-intro em{color:var(--green);font-style:normal}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:64px 80px;margin-bottom:80px}
+.stat{position:relative;padding-top:32px;border-top:1px solid var(--rule-dark)}
+.stat-tag{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:24px}
+.stat-num{font-family:"Archivo",sans-serif;font-weight:900;font-size:clamp(96px,12vw,180px);line-height:.85;letter-spacing:-.04em;color:#fff;display:flex;align-items:flex-start}
+.stat-num .pct{font-size:.45em;color:var(--azure);margin-left:6px;font-weight:700}
+.stat-desc{margin-top:24px;font-size:19px;line-height:1.5;color:var(--silver);max-width:440px}
+.stat-desc b{color:#fff;font-weight:600}
+.stat.contrast .stat-num{color:var(--silver)}
+.stat.contrast .stat-num .pct{color:var(--silver)}
+.stat-versus{position:absolute;top:32px;right:0;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+
+.source{display:flex;justify-content:space-between;align-items:end;gap:40px;padding-top:48px;border-top:1px solid var(--rule-dark);flex-wrap:wrap}
+.source-line{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--silver)}
+.source-line a{color:var(--green);border-bottom:1px solid currentColor}
+.source-takeaway{font-family:"Archivo",sans-serif;font-weight:600;font-size:24px;line-height:1.35;color:#fff;max-width:620px;letter-spacing:-.01em}
+.source-takeaway b{color:var(--green);font-weight:600}
+
+/* DIFFERENT pillars */
+.pillars{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.pillar{grid-column:span 6;background:#fff;border:1px solid var(--rule);border-radius:20px;padding:48px 44px;display:flex;flex-direction:column;gap:18px;min-height:280px;transition:all .3s}
+.pillar:hover{border-color:var(--azure);transform:translateY(-3px);box-shadow:0 24px 48px -16px rgba(11,31,61,.12)}
+.pillar.lead{grid-column:span 12;background:var(--navy);color:#fff;border-color:var(--navy);min-height:auto;padding:56px 56px}
+.pillar.lead .pillar-mark{color:var(--green)}
+.pillar.lead h3{font-size:42px}
+.pillar.lead p{color:var(--silver);font-size:19px;max-width:760px}
+.pillar.lead:hover{border-color:var(--navy)}
+.pillar-mark{font-family:"JetBrains Mono",monospace;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--azure);display:flex;align-items:center;gap:14px}
+.pillar-mark::before{content:"";width:24px;height:1px;background:currentColor}
+.pillar h3{font-family:"Archivo",sans-serif;font-weight:700;font-size:26px;line-height:1.15;letter-spacing:-.01em}
+.pillar p{font-size:16px;line-height:1.55;color:var(--ink-soft);margin-top:auto}
+
+/* EPISODES */
+.episodes-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:64px;gap:40px;flex-wrap:wrap}
+.episodes-head h2{font-family:"Archivo",sans-serif;font-weight:800;font-size:clamp(48px,5.6vw,84px);line-height:.95;letter-spacing:-.025em}
+.see-all{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;color:var(--azure);border-bottom:1px solid currentColor;padding-bottom:2px}
+.featured{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center;margin-bottom:64px;padding:56px;background:var(--navy);color:#fff;border-radius:28px;overflow:hidden;position:relative}
+.featured::before{content:"";position:absolute;right:-100px;top:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(124,232,58,.18),transparent 70%);pointer-events:none}
+.featured-art{aspect-ratio:1/1;background:linear-gradient(135deg,var(--azure),var(--navy-2));border-radius:18px;position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:flex-start;padding:32px}
+.featured-art::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(135deg,transparent 0,transparent 18px,rgba(255,255,255,.04) 18px,rgba(255,255,255,.04) 19px)}
+.featured-art .ph-label{position:relative;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);background:rgba(0,0,0,.3);padding:8px 14px;border-radius:6px;backdrop-filter:blur(4px)}
+.featured-art .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:88px;height:88px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:var(--navy);box-shadow:0 20px 40px -10px rgba(0,0,0,.4)}
+.featured-art .play svg{width:28px;height:28px;margin-left:4px}
+.featured-body .tag{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:20px;display:flex;gap:14px;align-items:center}
+.featured-body .tag .ep-no{background:rgba(124,232,58,.14);padding:6px 10px;border-radius:6px;color:var(--green)}
+.featured-body h3{font-family:"Archivo",sans-serif;font-weight:800;font-size:44px;line-height:1.05;letter-spacing:-.02em;margin-bottom:24px}
+.featured-body p{font-size:18px;line-height:1.55;color:var(--silver);margin-bottom:32px}
+.featured-body .guest{display:flex;align-items:center;gap:16px;padding-top:24px;border-top:1px solid var(--rule-dark)}
+.featured-body .guest .av{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--azure));flex-shrink:0;display:flex;align-items:center;justify-content:center;color:var(--navy);font-family:"Archivo",sans-serif;font-weight:800;font-size:18px}
+.featured-body .guest .gname{font-weight:600;color:#fff}
+.featured-body .guest .grole{font-size:14px;color:var(--silver)}
+
+.ep-list{display:flex;flex-direction:column;border-top:1px solid var(--rule)}
+.ep-row{display:grid;grid-template-columns:96px 1.6fr 1fr 120px 60px;gap:32px;align-items:center;padding:28px 8px;border-bottom:1px solid var(--rule);transition:background .2s}
+.ep-row:hover{background:#fff}
+.ep-row .ep-num{font-family:"Archivo",sans-serif;font-weight:800;font-size:28px;color:var(--azure);letter-spacing:-.02em}
+.ep-row .ep-title{font-family:"Archivo",sans-serif;font-weight:700;font-size:22px;line-height:1.2;letter-spacing:-.01em}
+.ep-row .ep-guest{font-size:15px;color:var(--ink-soft)}
+.ep-row .ep-dur{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--ink-soft);letter-spacing:.04em;text-align:right}
+.ep-row .ep-play{justify-self:end;width:44px;height:44px;border-radius:50%;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;color:var(--navy);transition:all .2s}
+.ep-row:hover .ep-play{background:var(--navy);color:#fff;border-color:var(--navy)}
+.ep-row .ep-play svg{width:14px;height:14px;margin-left:2px}
+
+/* FOUNDERS */
+.section.founders{background:var(--offwhite)}
+.founders-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin-bottom:48px}
+.founder{background:#fff;border:1px solid var(--rule);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
+.founder-photo{aspect-ratio:4/3;background:
+  linear-gradient(135deg,#cfd6e0,#e8ebef);
+  position:relative;display:flex;align-items:flex-end;padding:32px;overflow:hidden}
+.founder-photo.b{background:linear-gradient(135deg,#bdd7f5,#dde7f5)}
+.founder-photo.real{aspect-ratio:4/5;padding:0;background:linear-gradient(180deg,#e5eaf0,#f2f4f7)}
+.founder-photo.real.b{background:linear-gradient(180deg,#dbe5f3,#eaf0f8)}
+.founder-photo.real img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.founder-photo.real::before{display:none}
+.founder-creds{font-family:"JetBrains Mono",monospace;font-weight:500;font-size:.45em;letter-spacing:.12em;color:var(--azure);margin-left:8px;vertical-align:middle}
+
+.topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.topic-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:36px 32px;display:flex;flex-direction:column;gap:16px;min-height:300px;transition:all .25s}
+.topic-card:hover{border-color:var(--green);transform:translateY(-2px)}
+.topic-card .t-num{font-family:"Archivo",sans-serif;font-weight:900;font-size:40px;color:var(--green);line-height:1;letter-spacing:-.03em}
+.topic-card h3{font-family:"Archivo",sans-serif;font-weight:700;font-size:22px;line-height:1.2;letter-spacing:-.01em;color:#fff}
+.topic-card p{font-size:15px;line-height:1.55;color:var(--silver);margin-top:auto}
+.topic-card.teaser{background:linear-gradient(160deg,rgba(124,232,58,.10),rgba(124,232,58,.02));border-color:rgba(124,232,58,.25)}
+.topic-card.teaser .t-num{font-size:48px}
+@media (max-width:1100px){.topics-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:720px){.topics-grid{grid-template-columns:1fr}}
+.founder-photo::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(45deg,transparent 0,transparent 20px,rgba(11,31,61,.04) 20px,rgba(11,31,61,.04) 21px)}
+.founder-photo .ph-label{position:relative;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);background:rgba(255,255,255,.65);padding:8px 14px;border-radius:6px;backdrop-filter:blur(4px)}
+.founder-body{padding:40px 40px 44px;display:flex;flex-direction:column;gap:14px;flex:1}
+.founder-role{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--azure);font-weight:600}
+.founder-name{font-family:"Archivo",sans-serif;font-weight:800;font-size:36px;letter-spacing:-.02em;line-height:1}
+.founder-bio{font-size:16px;line-height:1.55;color:var(--ink-soft);margin-top:6px}
+.founder-links{display:flex;gap:18px;margin-top:auto;padding-top:20px;font-size:14px;font-weight:600}
+.founder-links a{color:var(--azure);display:inline-flex;gap:6px;align-items:center}
+
+.founder-shared{padding:48px;background:var(--navy);color:#fff;border-radius:24px;display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:center}
+.founder-shared h3{font-family:"Archivo",sans-serif;font-weight:700;font-size:28px;line-height:1.2;letter-spacing:-.015em}
+.founder-shared p{font-size:17px;line-height:1.55;color:var(--silver)}
+
+/* CTA */
+.cta{background:var(--navy-2);color:#fff;padding:140px 0;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;right:-200px;top:50%;transform:translateY(-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(124,232,58,.10),transparent 60%);pointer-events:none}
+.cta-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:center;position:relative}
+.cta h2{font-family:"Archivo",sans-serif;font-weight:800;font-size:clamp(48px,5.6vw,80px);line-height:.95;letter-spacing:-.025em;margin-bottom:24px}
+.cta h2 span{color:var(--green)}
+.cta p{font-size:20px;line-height:1.55;color:var(--silver);max-width:560px}
+.cta-form{display:flex;gap:8px;margin-top:36px;flex-wrap:wrap;max-width:540px}
+.cta-form input{flex:1;min-width:240px;padding:18px 24px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);color:#fff;font-family:"Inter",sans-serif;font-size:15px;outline:none;transition:border-color .2s}
+.cta-form input:focus{border-color:var(--green)}
+.cta-form input::placeholder{color:rgba(255,255,255,.5)}
+.cta-form button{padding:18px 28px;border-radius:999px;border:none;background:var(--green);color:var(--navy);font-family:"Inter",sans-serif;font-weight:700;font-size:15px;cursor:pointer;transition:transform .2s}
+.cta-form button:hover{transform:translateY(-1px)}
+
+.cta-side{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:36px;display:flex;flex-direction:column;gap:18px}
+.cta-side .label{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
+.cta-side .what{font-family:"Archivo",sans-serif;font-weight:700;font-size:20px;line-height:1.3}
+.cta-side ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.cta-side li{display:flex;gap:14px;font-size:15px;color:var(--silver);align-items:flex-start;line-height:1.45}
+.cta-side li::before{content:"";flex-shrink:0;margin-top:8px;width:6px;height:6px;border-radius:50%;background:var(--green)}
+
+/* Footer */
+footer{background:var(--navy-3);color:var(--silver);padding:80px 0 36px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:64px}
+.foot-brand{display:flex;flex-direction:column;gap:18px}
+.foot-brand .row{display:flex;align-items:center;gap:14px}
+.foot-brand img{height:48px;width:48px;border-radius:10px}
+.foot-brand .name{font-family:"Archivo",sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em;color:#fff}
+.foot-brand p{font-size:14px;line-height:1.6;color:var(--silver);max-width:300px}
+.foot-col h4{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:18px;font-weight:600}
+.foot-col a{display:block;font-size:14px;color:var(--silver);margin-bottom:12px;transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;border-top:1px solid rgba(255,255,255,.08);font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);flex-wrap:wrap;gap:16px}
+
+/* Reveal-on-scroll for stats */
+.stat-num{transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .9s ease;transform:translateY(20px);opacity:0}
+.stat.in .stat-num{transform:translateY(0);opacity:1}
+
+@media (max-width:1100px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-art{justify-self:start;max-width:380px}
+  .section-head{grid-template-columns:1fr;gap:24px}
+  .stats-grid{grid-template-columns:1fr;gap:48px}
+  .featured{grid-template-columns:1fr;padding:36px}
+  .pillars .pillar{grid-column:span 12}
+  .founders-grid{grid-template-columns:1fr}
+  .founder-shared{grid-template-columns:1fr;padding:36px}
+  .cta-grid{grid-template-columns:1fr;gap:48px}
+  .ep-row{grid-template-columns:60px 1fr 80px 40px;gap:18px}
+  .ep-row .ep-guest{display:none}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media (max-width:720px){
+  :root{--gutter:24px}
+  .section{padding:88px 0}
+  .hero{padding:80px 0 100px}
+  .nav-links{display:none}
+  .why-grid{grid-template-columns:1fr}
+  .why-cell{padding:36px 28px;min-height:auto}
+  .foot-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="#top">
+      <img src="assets/logo.png" alt="AI Catalyst" />
+      <div class="wordmark">
+        <span class="top">AI CATALYST</span>
+        <span class="bot">PODCAST</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#why">Why</a>
+      <a href="#numbers">The Numbers</a>
+      <a href="#different">What's Different</a>
+      <a href="#founders">Founders</a>
+    </nav>
+    <a class="nav-cta" href="#waitlist">
+      Join Waitlist
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow on-dark">AI · Life Sciences · Healthcare · BIPOC women-first</span>
+      <h1>
+        <span class="ai">AI</span><br/>
+        <span class="catalyst">CATALYST</span>
+      </h1>
+      <p class="hero-sub">
+        A women-first podcast for the <b>BIPOC operators, clinicians, and leaders</b> putting AI to work across biopharma and healthcare. Season 01 drops <b>Q3 2026</b> — join the waitlist for the cold open, the founding-listener perks, and the first three episodes a week before anyone else.
+      </p>
+
+      <form class="hero-waitlist" id="hero-form" onsubmit="event.preventDefault();this.classList.add('ok');this.querySelector('.hw-status').textContent='You\u2019re on the list. Talk soon.';">
+        <input type="email" placeholder="you@hospital.org" required />
+        <button type="submit">Join the waitlist <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+        <div class="hw-status"></div>
+      </form>
+
+      <div class="hero-meta">
+        <div class="meta-item"><span class="dot"></span>&nbsp;&nbsp;Season 01 · In production</div>
+        <div class="meta-item">Premieres Q3 2026</div>
+        <div class="meta-item">200+ on the list</div>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <img src="assets/logo.png" alt="AI Catalyst podcast cover art" />
+      <div class="ep-badge">
+        <span class="n">S01</span>
+        <span class="l">premieres<br/>Q3 2026</span>
+      </div>
+      <div class="badge">Now boarding</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE STRIP -->
+<div class="strip">
+  <div class="strip-track">
+    <span>
+      Clinicians&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Operators&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Regulators&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Founders&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Data scientists&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Pharma&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Biotech&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Digital health&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;
+    </span>
+    <span>
+      Clinicians&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Operators&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Regulators&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Founders&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Data scientists&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Pharma&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Biotech&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;Digital health&nbsp;&nbsp;<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>&nbsp;&nbsp;
+    </span>
+  </div>
+</div>
+
+<!-- WHY -->
+<section class="section" id="why" data-screen-label="Why">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">The reality today</span>
+        <h2>AI ambition outpaces deployment.</h2>
+      </div>
+      <p class="lede">
+        Investment and adoption are accelerating across the life sciences value chain. But translating AI ambition into safe, scalable, real-world deployment is a different problem — and the people closest to that work rarely get a microphone.
+      </p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-cell">
+        <span class="why-num">01 / Deployment</span>
+        <h3>Ambition is loud. Deployment is harder than it looks.</h3>
+        <p>Organizations are investing heavily but struggling to translate the AI mandate into safe, scalable, real-world execution inside regulated environments.</p>
+      </div>
+      <div class="why-cell">
+        <span class="why-num">02 / Literacy</span>
+        <h3>The literacy gap is wider than the headlines admit.</h3>
+        <p>Clinicians, operators, and leaders sit at very different levels of AI fluency — and role-aware learning pathways across that spectrum are scarce.</p>
+      </div>
+      <div class="why-cell">
+        <span class="why-num">03 / Discourse</span>
+        <h3>Industry talk is stuck at the extremes.</h3>
+        <p>It's either high-altitude vision or deep technical specifics. Almost nothing translates AI concepts into practical guidance for actual organizational maturity levels.</p>
+      </div>
+      <div class="why-cell">
+        <span class="why-num">04 / Representation</span>
+        <h3>Women are missing from applied AI leadership.</h3>
+        <p>Particularly at the intersection of clinical, regulatory, and operational decision-making — the exact intersection where the most consequential AI calls are being made today.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="section dark" id="numbers" data-screen-label="The Numbers">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow on-dark">The numbers tell a story</span>
+        <h2>An optimism gap is already forming — and it tracks who gets encouraged to use AI.</h2>
+      </div>
+      <p class="lede">
+        Lean In and McKinsey's <em>Women in the Workplace</em> research finds entry-level women receive markedly less manager encouragement to use AI than men at the same level. There's a strong link between using AI and feeling optimistic about it — which means today's encouragement gap is tomorrow's leadership gap.
+      </p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-tag">Encouragement · Entry-level women</div>
+        <div class="stat-num">21<span class="pct">%</span></div>
+        <div class="stat-desc">
+          of entry-level women are <b>encouraged by their manager</b> to use AI.
+        </div>
+        <div class="stat-versus">vs. men →</div>
+      </div>
+      <div class="stat contrast">
+        <div class="stat-tag">Encouragement · Entry-level men</div>
+        <div class="stat-num">33<span class="pct">%</span></div>
+        <div class="stat-desc">
+          of entry-level men receive the same encouragement — a <b>12-point gap</b> at the very moment AI fluency compounds fastest.
+        </div>
+      </div>
+      <div class="stat">
+        <div class="stat-tag">Optimism · Entry-level women</div>
+        <div class="stat-num">37<span class="pct">%</span></div>
+        <div class="stat-desc">
+          believe AI will <b>improve their career prospects</b>.
+        </div>
+        <div class="stat-versus">vs. overall →</div>
+      </div>
+      <div class="stat contrast">
+        <div class="stat-tag">Optimism · All employees</div>
+        <div class="stat-num">60<span class="pct">%</span></div>
+        <div class="stat-desc">
+          of employees overall believe AI will improve theirs — a <b>23-point optimism gap</b> that mirrors the access gap above.
+        </div>
+      </div>
+    </div>
+
+    <div class="source">
+      <div class="source-line">
+        Source: <a href="https://leanin.org/women-in-the-workplace" target="_blank" rel="noreferrer">Lean In × McKinsey · Women in the Workplace</a>
+      </div>
+      <div class="source-takeaway">
+        Less exposure, less encouragement, less optimism. <b>Compounded over a career, that's a leadership pipeline.</b> This podcast exists to disrupt that math.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENT -->
+<section class="section" id="different" data-screen-label="What's Different">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">What makes us different</span>
+        <h2>A trusted, dedicated resource — not another AI hype channel.</h2>
+      </div>
+      <p class="lede">
+        Operators and cross-functional leaders lack a place to get accessible, actionable, cross-functional AI insight. We're building that place. Here's the lens we bring to every conversation.
+      </p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar lead">
+        <span class="pillar-mark">Pillar 01 · Women-first leadership</span>
+        <h3>The only global platform spotlighting female leaders shaping applied AI decisions in biopharma and life sciences.</h3>
+        <p>Particularly at the intersection of clinical, regulatory, and operational leadership — the exact rooms where representation is thinnest and the stakes are highest.</p>
+      </div>
+
+      <div class="pillar">
+        <span class="pillar-mark">Pillar 02 · 360° perspective</span>
+        <h3>Cross-level, cross-functional conversations.</h3>
+        <p>Learners, clinicians, operators, founders, and AI experts — featured across roles, functions, and maturity levels from first experiments to enterprise-scale impact.</p>
+      </div>
+
+      <div class="pillar">
+        <span class="pillar-mark">Pillar 03 · Operational proof</span>
+        <h3>Real cases, real trade-offs, real artifacts.</h3>
+        <p>Beyond the hype: actual decision logs, deployment artifacts, and execution stories from regulated environments where AI has to work the day after the launch.</p>
+      </div>
+
+      <div class="pillar">
+        <span class="pillar-mark">Pillar 04 · Action beyond audio</span>
+        <h3>Playbooks, mini-sessions, infographics.</h3>
+        <p>Each episode extends into curated tools that translate insight into decision support — usable by a director, an operator, or a first-year analyst.</p>
+      </div>
+
+      <div class="pillar">
+        <span class="pillar-mark">Pillar 05 · Cross-level accessibility</span>
+        <h3>Executives and early-career operators in the same conversation.</h3>
+        <p>Meeting stakeholders at different levels of AI literacy without diluting rigor or relevance — the rare resource that's useful to a CMO and a clinical analyst in the same week.</p>
+      </div>
+
+      <div class="pillar">
+        <span class="pillar-mark">Pillar 06 · Built by practitioners</span>
+        <h3>From inside the work, not above it.</h3>
+        <p>Hosted by a physician and a pharmacist with combined experience across clinical care, biotech, pharma, digital health, and AI implementation. Not a media studio — a working group with a microphone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPICS PREVIEW (replaces episodes pre-launch) -->
+<section class="section deep" id="topics" data-screen-label="Topics">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow on-dark">Season 01 · In the studio</span>
+        <h2 style="color:#fff">What we're recording right now.</h2>
+      </div>
+      <p class="lede">
+        A peek at the conversations queued for the launch slate. Final lineup, guests, and run dates are reserved for the waitlist — sign up to get the cold open and the first three episodes a week before public release.
+      </p>
+    </div>
+
+    <div class="topics-grid">
+      <div class="topic-card">
+        <div class="t-num">01</div>
+        <h3>From clinical hunch to clinical workflow.</h3>
+        <p>A two-year journey from a model that "worked on the slide" to one that worked on the floor — governance fights, missed failure modes, and the nurse manager who rewrote the rollout plan.</p>
+      </div>
+      <div class="topic-card">
+        <div class="t-num">02</div>
+        <h3>Your AI governance committee is reviewing the wrong things.</h3>
+        <p>What regulatory leaders inside top-15 pharma actually look at when an AI artifact crosses their desk — and the questions they wish operators would ask first.</p>
+      </div>
+      <div class="topic-card">
+        <div class="t-num">03</div>
+        <h3>The clinical-ops playbook for evaluating an AI vendor.</h3>
+        <p>A VP of clinical operations on the scorecard her team uses to separate AI vendors with a deployment story from AI vendors with a demo.</p>
+      </div>
+      <div class="topic-card">
+        <div class="t-num">04</div>
+        <h3>"I was the only woman in the model review."</h3>
+        <p>Building applied AI teams in life sciences that don't replicate the access gap — hiring, sponsorship, and the projects that actually compound for early-career women.</p>
+      </div>
+      <div class="topic-card">
+        <div class="t-num">05</div>
+        <h3>From entry-level to AI-fluent.</h3>
+        <p>A learning &amp; development lead at a global CRO on the upskilling path that closes the 21%-vs-33% encouragement gap — and the manager behaviors that move the needle.</p>
+      </div>
+      <div class="topic-card teaser">
+        <div class="t-num">+</div>
+        <h3>And the ones we can't talk about yet.</h3>
+        <p>Guests under embargo, a regulator we're still convincing, and one founder whose deployment story is going to surprise you. Waitlist subscribers hear first.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="section founders" id="founders" data-screen-label="Founders">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">About the founders</span>
+        <h2>A physician and a pharmacist with a microphone.</h2>
+      </div>
+      <p class="lede">
+        Two clinical operators bridging the clinical, operational, and scientific worlds — and personally committed to elevating women in data, AI, and science leadership. Combined experience across clinical care, biotech, pharma, digital health, and AI implementation.
+      </p>
+    </div>
+
+    <div class="founders-grid">
+      <div class="founder">
+        <div class="founder-photo real">
+          <img src="assets/june.png" alt="June Lau, MD, MGM" />
+        </div>
+        <div class="founder-body">
+          <span class="founder-role">Co-host · Physician</span>
+          <div class="founder-name">June Lau, <span class="founder-creds">MD, MGM</span></div>
+          <p class="founder-bio">Clinician-operator working at the intersection of care delivery, digital health, and applied AI. Brings the clinical fluency that makes operator and regulator conversations land for a bedside audience.</p>
+          <div class="founder-links">
+            <a href="mailto:june.lfw@gmail.com">june.lfw@gmail.com &nbsp;→</a>
+            <a href="#">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="founder">
+        <div class="founder-photo real b">
+          <img src="assets/leanna.png" alt="Leanna Baker, PharmD" />
+        </div>
+        <div class="founder-body">
+          <span class="founder-role">Co-host · Pharmacist</span>
+          <div class="founder-name">Leanna Baker, <span class="founder-creds">PharmD</span></div>
+          <p class="founder-bio">Pharmacist with deep tenure across biotech and pharma operations, translating AI ambition into the actual artifacts — protocols, decision logs, governance — that make deployment work in regulated environments.</p>
+          <div class="founder-links">
+            <a href="mailto:leanna@novalyse.com">leanna@novalyse.com &nbsp;→</a>
+            <a href="#">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-shared">
+      <h3>"Bridging the gap between AI vision and operational reality — one conversation at a time."</h3>
+      <p>Personally committed to elevating women in data, AI, and science leadership. We bring the perspectives that get spoken about in the abstract — and rarely handed a microphone in the actual rooms where these decisions get made.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="waitlist" data-screen-label="Waitlist">
+  <div class="container cta-grid">
+    <div>
+      <span class="eyebrow on-dark">Founding listeners</span>
+      <h2 style="margin-top:14px">Be on the list before <span>Season 01</span> drops.</h2>
+      <p>Get the cold open the day we cut it, the first three episodes a week before public release, and the field-notes companion email — frameworks, artifacts, and the one thing the guest wouldn't say on the record.</p>
+      <form class="cta-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='You\u2019re in ✓';this.querySelector('input').disabled=true;">
+        <input type="email" placeholder="you@hospital.org" required />
+        <button type="submit">Join the waitlist</button>
+      </form>
+      <div style="margin-top:18px;font-size:13px;color:rgba(255,255,255,.5);font-family:'JetBrains Mono',monospace;letter-spacing:.08em">200+ already on the list · No spam, unsubscribe anytime</div>
+    </div>
+
+    <aside class="cta-side">
+      <span class="label">Founding-listener perks</span>
+      <div class="what">Three reasons to be on the list before launch day.</div>
+      <ul>
+        <li><b>Early access.</b> First three episodes drop in your inbox a full week before public release.</li>
+        <li><b>Field notes.</b> The decision framework, the artifact, and the source list — sent with every episode.</li>
+        <li><b>A seat at the live recording.</b> Founding listeners get the first invites to in-studio Q&amp;As with our guests.</li>
+        <li><b>Pitch a guest.</b> Tell us who we should be talking to — we read every reply.</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="row">
+          <img src="assets/logo.png" alt="AI Catalyst" />
+          <div>
+            <div class="name">AI CATALYST</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--silver);margin-top:4px">PODCAST</div>
+          </div>
+        </div>
+        <p>The women-first AI in life sciences and healthcare podcast — built for BIPOC operators, clinicians, and leaders.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Listen</h4>
+        <a href="#">Apple Podcasts</a>
+        <a href="#">Spotify</a>
+        <a href="#">YouTube</a>
+        <a href="#">RSS feed</a>
+      </div>
+      <div class="foot-col">
+        <h4>Show</h4>
+        <a href="#why">Why this podcast</a>
+        <a href="#topics">Topics in production</a>
+        <a href="#founders">Founders</a>
+        <a href="#waitlist">Join waitlist</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="mailto:june.lfw@gmail.com">june.lfw@gmail.com</a>
+        <a href="mailto:leanna@novalyse.com">leanna@novalyse.com</a>
+        <a href="#">Pitch a guest →</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 AI Catalyst Podcast · All rights reserved</div>
+      <div>Made with care for the operators in the room</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Reveal stats on scroll
+const io = new IntersectionObserver((entries)=>{
+  for(const e of entries){
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  }
+},{threshold:.25});
+document.querySelectorAll('.stat').forEach(el=>io.observe(el));
+
+// Smooth scroll for in-page links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',ev=>{
+    const id=a.getAttribute('href');
+    if(id.length>1){
+      const t=document.querySelector(id);
+      if(t){ev.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-72,behavior:'smooth'});}
+    }
+  });
+});
+</script>
+
+</body>
+</html>
