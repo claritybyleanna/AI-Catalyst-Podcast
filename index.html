@@ -88,6 +88,10 @@ img{max-width:100%;display:block}
 .hero-waitlist button:hover{transform:translateY(-1px)}
 .hero-waitlist.ok input{opacity:.5}
 .hero-waitlist.ok button{background:#fff}
+.hero-waitlist-cta{display:inline-flex;align-items:center;gap:10px;padding:20px 32px;border-radius:999px;background:var(--green);color:var(--navy);font-family:"Inter",sans-serif;font-weight:700;font-size:15px;letter-spacing:.01em;transition:transform .2s,box-shadow .2s;text-decoration:none;box-shadow:0 8px 24px -8px rgba(124,232,58,.4)}
+.hero-waitlist-cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px -8px rgba(124,232,58,.55)}
+.hero-waitlist-cta svg{width:14px;height:14px}
+.hw-note{flex-basis:100%;margin-top:14px;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;color:var(--silver);text-transform:uppercase;opacity:.7}
 .hw-status{flex-basis:100%;margin-top:8px;font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--green);min-height:1em}
 .hero-meta .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(124,232,58,.18)}
 .hero-meta .meta-item{font-size:13px;font-family:"JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
@@ -239,6 +243,8 @@ img{max-width:100%;display:block}
 .cta-form input::placeholder{color:rgba(255,255,255,.5)}
 .cta-form button{padding:18px 28px;border-radius:999px;border:none;background:var(--green);color:var(--navy);font-family:"Inter",sans-serif;font-weight:700;font-size:15px;cursor:pointer;transition:transform .2s}
 .cta-form button:hover{transform:translateY(-1px)}
+.cta-form-link{display:inline-flex;align-items:center;gap:10px;padding:20px 36px;border-radius:999px;background:var(--green);color:var(--navy);font-family:"Inter",sans-serif;font-weight:700;font-size:15px;letter-spacing:.01em;transition:transform .2s,box-shadow .2s;text-decoration:none;box-shadow:0 8px 24px -8px rgba(124,232,58,.4)}
+.cta-form-link:hover{transform:translateY(-2px);box-shadow:0 12px 28px -8px rgba(124,232,58,.55)}
 
 .cta-side{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:36px;display:flex;flex-direction:column;gap:18px}
 .cta-side .label{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
@@ -327,11 +333,12 @@ footer{background:var(--navy-3);color:var(--silver);padding:80px 0 36px}
         A women-first podcast for the <b>BIPOC operators, clinicians, and leaders</b> putting AI to work across biopharma and healthcare. Season 01 drops <b>Q3 2026</b> — join the waitlist for the cold open, the founding-listener perks, and the first three episodes a week before anyone else.
       </p>
 
-      <form class="hero-waitlist" id="hero-form" onsubmit="event.preventDefault();this.classList.add('ok');this.querySelector('.hw-status').textContent='You\u2019re on the list. Talk soon.';">
-        <input type="email" placeholder="you@hospital.org" required />
-        <button type="submit">Join the waitlist <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
-        <div class="hw-status"></div>
-      </form>
+      <div class="hero-waitlist">
+        <a href="https://airtable.com/appI7ECvstqzrNNbI/pagRzV5HqWkOP2g1c/form?prefill_Source=Hero" target="_blank" rel="noopener" class="hero-waitlist-cta">
+          Join the waitlist <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <div class="hw-note">Takes 20 seconds · We'll never share your email</div>
+      </div>
 
       <div class="hero-meta">
         <div class="meta-item"><span class="dot"></span>&nbsp;&nbsp;Season 01 · In production</div>
@@ -618,10 +625,11 @@ footer{background:var(--navy-3);color:var(--silver);padding:80px 0 36px}
       <span class="eyebrow on-dark">Founding listeners</span>
       <h2 style="margin-top:14px">Be on the list before <span>Season 01</span> drops.</h2>
       <p>Get the cold open the day we cut it, the first three episodes a week before public release, and the field-notes companion email — frameworks, artifacts, and the one thing the guest wouldn't say on the record.</p>
-      <form class="cta-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='You\u2019re in ✓';this.querySelector('input').disabled=true;">
-        <input type="email" placeholder="you@hospital.org" required />
-        <button type="submit">Join the waitlist</button>
-      </form>
+      <div class="cta-form">
+        <a href="https://airtable.com/appI7ECvstqzrNNbI/pagRzV5HqWkOP2g1c/form?prefill_Source=CTA-Section" target="_blank" rel="noopener" class="cta-form-link">
+          Join the waitlist <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
       <div style="margin-top:18px;font-size:13px;color:rgba(255,255,255,.5);font-family:'JetBrains Mono',monospace;letter-spacing:.08em">200+ already on the list · No spam, unsubscribe anytime</div>
     </div>
 
